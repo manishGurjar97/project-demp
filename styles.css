@@ -1,0 +1,277 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+header img {
+    height: 150px;
+    width: 150px;
+    display: flex;
+}
+
+.container-fluid {
+    margin-left: 500px;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background: white;
+}
+
+.hero-text {
+    text-align: left;
+    max-width: 500px;
+    padding: 40px;
+}
+
+.hero-image img {
+    width: 250px;
+    border-radius: 50%;
+}
+
+.highlight {
+    color: blue;
+    font-weight: bold;
+}
+
+.cta {
+    background: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    background: #3b4699;
+    color: white;
+    padding: 30px 0;
+}
+
+.stat {
+    margin: 0 30px;
+}
+
+.stat h2 {
+    margin: 0;
+}
+
+.cardd {
+    height: 350px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 40px;
+}
+
+.cardd div img {
+    height: 200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    z-index: 100;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav, .item {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item {
+    column-gap: 20px;
+}
+
+.nav_logo {
+    font-size: 25px;
+}
+
+.nav_links:hover {
+    color: #d9d9d9;
+}
+
+.home {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 200;
+}
+
+.button {
+    padding: 6px 24px;
+    border: 2px solid brown;
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+.wrap {
+    position: relative;
+    width: 420px;
+    background: transparent;
+    color: aliceblue;
+    border-radius: 10px;
+    padding: 10px 20px 30px 20px;
+    border: 2px solid black;
+    backdrop-filter: blur(5px);
+}
+
+.wrap h1 {
+    text-align: center;
+    font-size: 36px;
+}
+
+.wrap .input-box {
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    padding-left: 20px;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    font-size: 16px;
+    color: #fff;
+    border-radius: 40px;
+}
+
+.input-box i {
+    position: absolute;
+    margin-top: 20px;
+}
+
+.wrap .remember {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 14.5px;
+    margin: 20px;
+}
+
+.remember label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.remember a {
+    color: #fff;
+}
+
+#btn {
+    width: 95%;
+    margin-left: 9px;
+    cursor: pointer;
+    font-size: larger;
+    padding: 5px 5px 6px 6px;
+    border-radius: 40px;
+}
+
+.register {
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 18px;
+    margin-bottom: 5px;
+}
+
+.register a {
+    color: black;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    z-index: 200;
+    transition: transform 0.2s ease;
+}
+
+.close-btn:hover {
+    transform: scale(1.2);
+}
+
+#login-form,
+#signup-form {
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.9);
+    position: absolute;
+    left: 0;
+    top: 80px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-form.show,
+#signup-form.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    position: relative;
+    display: flex;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    z-index: -1;
+    display: none;
+}
+
+#login-form.show ~ body::before,
+#signup-form.show ~ body::before {
+    display: block;
+}
