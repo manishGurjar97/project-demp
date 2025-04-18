@@ -6,15 +6,7 @@ body {
     text-align: center;
 }
 
-header img {
-    height: 150px;
-    width: 150px;
-    display: flex;
-}
 
-.container-fluid {
-    margin-left: 500px;
-}
 
 .hero {
     display: flex;
@@ -65,23 +57,7 @@ header img {
     margin: 0;
 }
 
-.cardd {
-    height: 350px;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    top: 40px;
-}
 
-.cardd div img {
-    height: 200px;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 .header {
     position: fixed;
@@ -101,7 +77,8 @@ a {
     margin: 0 auto;
 }
 
-.nav, .item {
+.nav,
+.item {
     display: flex;
     height: 100%;
     align-items: center;
@@ -242,7 +219,7 @@ a {
     opacity: 0;
     visibility: hidden;
     transform: scale(0.9);
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 80px;
     width: 100%;
@@ -255,23 +232,10 @@ a {
     opacity: 1;
     visibility: visible;
     transform: scale(1);
-    position: relative;
-    display: flex;
+
 }
 
 body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(4px);
-    z-index: -1;
-    display: none;
-}
 
-#login-form.show ~ body::before,
-#signup-form.show ~ body::before {
-    display: block;
+    display: none;
 }
