@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+    <div class="header">
+        <div class="nav">
+            <a href="#" class="nav_logo">📘PlacePrep</a>
+            <ul class="items">
+                <li class="item">
+                    <a href="http://localhost:8080/home" class="nav_links">HOME</a>
+                    <a href="http://localhost:8080/course" class="nav_links">COURSE</a>
+                    <a href="http://localhost:8080/about" class="nav_links">ABOUT</a>
+                    <a href="http://localhost:8080/contect" class="nav_links">CONTACT</a>
+                </li>
+            </ul>
+            <button class="button" id="show-login">Login</button>
+        </div>
+    </div>
+    <div class="body">
+<section class="courses-section">
+    <h2>COURSES</h2>
+    <div class="course-container">
+      <div class="course-card">
+       <div class="course-image" style="background-image: url('logos/web.jpg');">
+
+          <span class="access-label">Access fast</span>
+        </div>
+        <div class="course-content">
+          <h3>WEB DEVELOPMENT</h3>
+          <div class="progress">
+            <div class="progress-bar" style="width: 81%;"></div>
+          </div>
+          <p class="progress-text">0% COMPLETE</p>
+          <a href="http://localhost:8080/coursevisite" class="btn1">Continue</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-image" style="background-image: url('logos/dsa.jpg');">
+          <span class="access-label">Access Fast</span>
+        </div>
+        <div class="course-content">
+          <h3>DSA</h3>
+          <p>Complete DSA + Development + Aptitude for Placement Preparation.</p>
+          <div class="progress">
+            <div class="progress-bar" style="width: 39%;"></div>
+          </div>
+          <p class="progress-text">0% COMPLETE</p>
+          <a href="http://localhost:8080/coursevisite" class="btn1">Continue</a>
+        </div>
+      </div>
+    </div>
+  </section>
+    </div>
+
+  
+  <footer>
+  <%- include("include/footer.ejs") %>
+
+  <p>&copy; 2025 PlacePrep. All rights reserved.</p>
+
+</footer>
+</body>
+</html>
